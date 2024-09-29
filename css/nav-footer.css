@@ -1,0 +1,123 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #3a4d42;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav a {
+  color: #ecf1ec;
+  text-decoration: none;
+  font-size: 19px;
+  transition: color 0.3s;
+  font-weight: 600;
+  padding: 10px;
+  line-height: 1;
+}
+
+nav a.nav-home {
+  font-size: 25px;
+}
+
+
+nav a:hover {
+  color: #c3c3c3;
+  transform: scale(1.1);
+}
+
+
+
+  
+
+
+/* ------ Footer ------ */
+
+
+
+
+
+
+footer {
+  background-color: #3a4d42;
+  color: #fff; 
+  text-align: center; 
+  padding: 20px 0; 
+  position: relative; 
+  bottom: 0; 
+  width: 100%; 
+
+}
+
+.footer-content p {
+  margin: 0; 
+  font-size: 14px;
+}
+
+
+
+
+
+/* Navigation bar media queries */
+
+
+
+@media (max-width: 500px) {
+    nav {
+      justify-content: flex-start; 
+      padding-left: 20px; 
+      gap: 3vw;
+    }
+    
+    nav a {
+      padding-left: 10px; 
+     
+    }
+
+    nav a.nav-home {
+        font-size: 19px; /* Shrink 'Home' font size below 500px */
+    }
+  }
+  
+
+  @media (max-width: 436px) {
+    nav {
+      justify-content: flex-start; 
+      padding-left: 10px; 
+    }
+    
+    nav a {
+      font-size: 15px;
+    }
+  }
+
+
+  /* -------------------------- */
+
+
+  /* Footer media queries */
+
+
+
+
+
+@media (max-width: 768px) {
+  .students-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .students-left,
+  .students-right {
+    width: 100%;
+  }
+}
+
+
+
+

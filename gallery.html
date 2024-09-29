@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Food Technology Exhibition</title>
+    <link rel="stylesheet" href="/css/gallery.css">
+    <link rel="stylesheet" href="/css/nav-footer.css">
+</head>
+
+<body>
+
+    <nav>
+        <a class="nav-home" href="index.html">Home</a>
+        <a class="nav-gallery" href="gallery.html">Gallery</a>
+        <a class="nav-categories" href="categories.html">Categories</a>
+        <a class="nav-student" href="/html/index.html#students">Students</a>
+    </nav>
+
+    <section class="gallery-section">
+        <h1>Gallery</h1>
+        <p>Explore the vibrant culinary creations of our talented Year 11 students and hear their unique perspectives on
+            the creative process behind each dish.</p>
+
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="/images/food-images/food-1.jpg" alt="Lamb, Manuka and Potato Fondant Bite" class="gallery-image">
+                <h2>Lamb, Manuka and Potato Fondant Bite</h2>
+                <p>This dish features medium-rare lamb with a savory, seared crust. Underneath, a crispy, golden potato
+                    with a soft, buttery interior is drizzled with a rich Manuka honey sauce. Together, these elements
+                    create a balanced and flavorful canapé.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/food-images/food-2.jpg" alt="Beef and Kumara Empanada" class="gallery-image">
+                <h2>Beef and Kumara Empanada</h2>
+                <p>My dish is empanadas. I experimented with different types of flour—self-raising, high grade, and
+                    wholemeal. For my indigenous ingredient, I used kumara</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/food-images/food-3.png" alt="Tarakihi Ceviche" class="gallery-image">
+                <h2>Tarakihi Ceviche</h2>
+                <br>
+                <p>This is my take on the South American dish ceviche. In this unit, we had to incorporate an indigenous
+                    ingredient, and I decided to use our local seafood, tarakihi.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/food-images/food-4.png" alt="Cheese Turnover" class="gallery-image">
+                <h2>Cheese Turnover</h2>
+                <br>
+                <p>This dish is perfect for those seeking convenience and flavor. It offers a quick and easy meal with
+                    minimal effort. The combination of cheese, sauce, and your favorite toppings wrapped in a crispy,
+                    handheld package makes it ideal for busy days or when you need a tasty snack.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/food-images/food-5.jpg" alt="Eye Fillet and Caramelised Onion Cracker" class="gallery-image">
+                <h2>Eye Fillet and Caramelised Onion Cracker</h2>
+                <p>In this unit, we tested ingredient properties and focused on using indigenous ingredients. My dish
+                    features an eye fillet and caramelized onion cracker. I experimented with different flours and
+                    settled on wholemeal flour, while Manuka honey is incorporated into the mascarpone.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/food-images/food-6.jpg" alt="Salmon Blini with Kawakawa Cream" class="gallery-image">
+                <h2>Salmon Blini with Kawakawa Cream</h2>
+                <br>
+                <p>For this finger food, I made a self-rising flour blini topped with kawakawa cream and Manuka-smoked
+                    salmon. This was part of an assessment where we had to incorporate a traditional ingredient—I chose
+                    kawakawa and Manuka-smoked salmon.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/food-images/food-7.png" alt="Bruschetta with Kawakawa Crostini" class="gallery-image">
+                <h2>Bruschetta with Kawakawa Crostini</h2>
+                <br>
+                <p>My dish is bruschetta with kawakawa crostini. We were required to use a New Zealand indigenous
+                    ingredient, so I added kawakawa to my bread dough. After experimenting with different types of
+                    flour, my stakeholders agreed that self-raising flour worked the best.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/images/food-images/food-8.jpg" alt="Honey Soy Chicken on Crispy Rice" class="gallery-image">
+                <h2>Honey Soy Chicken on Crispy Rice</h2>
+                <br>
+                <p>This canapé features a crispy, golden-brown rice base topped with pieces of honey soy chicken, coated
+                    in a rich, sweet, and tangy sauce. Garnished with toasted sesame seeds and spring onions, this dish
+                    is colorful and delicious.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="myModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="img01">
+
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Saint Kentigern College Technology Exhibition. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.getElementById("myModal");
+            const modalImg = document.getElementById("img01");
+            const closeModal = document.querySelector(".modal-close");
+
+
+            const images = document.querySelectorAll(".gallery-image");
+
+
+            images.forEach((img) => {
+                img.addEventListener("click", function () {
+                    modal.style.display = "flex";
+                    modalImg.src = this.src;
+                });
+            });
+
+
+            closeModal.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+
+
+            modal.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

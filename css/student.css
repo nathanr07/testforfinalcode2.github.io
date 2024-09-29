@@ -1,0 +1,166 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f0ebe6;
+    margin: 0;
+    padding: 0;
+}
+
+nav a.nav-student {
+    font-weight: 800;
+    border-bottom: 2px solid #ffffff; /* Underlines students on nav bar */
+}
+
+.student-section {
+    flex: 1; 
+    padding: 105px 40px;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-bottom: 160px; 
+}
+
+.student-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.text-content {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.text-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Image */
+
+.image-content {
+    flex: 1;
+    text-align: right;
+    padding-top: 120px;
+}
+
+.image-content img {
+    max-width: 70%; 
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/*------ Media queries for changing screen sizes ------*/
+
+
+
+
+
+@media (max-width: 1420px) {
+    .text-content {
+    padding-left: 30px;
+    }
+
+    .image-content {
+        padding-right: 30px;
+        
+    }
+}
+
+
+@media (max-width: 1240px) {
+    .text-content {
+        margin-top: 60px;
+    }
+}
+
+
+
+/* Changes for Ipads */
+
+
+@media (max-width: 930px) {
+    .student-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        padding: 0 15px;
+    }
+
+    .text-content p {
+        margin-bottom: -30px;
+    }
+
+    .image-content {
+        text-align: center;
+        padding-top: 0; 
+        margin-top: 140px; 
+        padding-right: 0px;
+    }
+
+    .image-content img {
+        max-width: 65%; 
+    }
+
+
+}
+
+
+
+
+@media (max-width: 768px) {
+    .student-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        padding: 0 15px;
+    }
+
+    .text-content p {
+        margin-bottom: -30px;
+    }
+
+    .image-content {
+        text-align: center;
+        padding-top: 0; 
+        margin-top: 140px; 
+    }
+
+    .image-content img {
+        max-width: 65%; 
+    }
+}
+
+/* Changes for phones */
+
+@media (max-width: 480px) {
+    .image-content img {
+        max-width: 90%; /* Ensures the image is is big enough for small screens */
+    }
+
+    .text-content p {
+        line-height: 1.4;
+    }
+
+    .text-content {
+        padding: 0 0px;
+    }
+}
